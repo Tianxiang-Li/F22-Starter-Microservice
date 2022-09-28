@@ -23,7 +23,7 @@ def t1():
 
 
 def t2():
-    student_url = "http://127.0.0.1:5011/api/students/0fcfc1f1-5c30-4632-8092-23bc2ee332f5"
+    student_url = "http://127.0.0.1:5011/api/students/tl3091"
     try:
         h_message = requests.get(student_url)
         if h_message.status_code == 200:
@@ -41,5 +41,5 @@ def t2():
 
 if __name__ == "__main__":
     t1()
-    #t2()
+    t2()
 
