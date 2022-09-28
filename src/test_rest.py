@@ -22,7 +22,24 @@ def t1():
         print("\n")
 
 
+def t2():
+    student_url = "http://127.0.0.1:5011/api/students/0fcfc1f1-5c30-4632-8092-23bc2ee332f5"
+    try:
+        h_message = requests.get(student_url)
+        if h_message.status_code == 200:
+            print("\n\n Congratulations. Your end-to-end test worked. \n\n")
+            print("Application Student message = \n")
+            data = h_message.json()
+            print(json.dumps(data, indent=2))
+            print("\n")
+        else:
+            print("\n\n Epic Fail. Status code = ", h_message.status_code, "\n\n")
+            print("\n")
+    except Exception as e:
+        print("\n\n Epic, Epic, Epic Fail. Exception = ", e, "\n\n")
+        print("\n")
+
 if __name__ == "__main__":
     t1()
-
+    #t2()
 
